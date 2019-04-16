@@ -1,7 +1,8 @@
 recursive := method(
-	if(call sender doMessage(call message argAt(0)) == 1, 1, 
-		if(call sender doMessage(call message argAt(0)) == 2, 1, 
-			recursive(call sender doMessage(call message argAt(0)) - 1) + recursive(call sender doMessage(call message argAt(0)) - 2)
+	n := call sender doMessage(call message argAt(0))
+	if(n == 1, 1, 
+		if(n == 2, 1, 
+			recursive(n - 1) + recursive(n - 2)
 		)
 	)
 )
