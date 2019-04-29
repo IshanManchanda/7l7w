@@ -4,10 +4,12 @@ puts list.to_s
 
 puts list.sort.to_s
 
+# Any in list > 100? All in list < 100?
 puts list.any? {|x| x > 100}, list.all? {|x| x < 100}
 
 # Get all even, odd numbers
-puts list.select {|x| x % 2 == 0}.to_s, list.select {|x| x % 2 == 1}.to_s
+puts list.select {|x| x % 2 == 0}.to_s
+puts list.select {|x| x % 2 == 1}.to_s
 
 puts list.max, list.min
 
