@@ -16,7 +16,7 @@ puts list.max, list.min
 # Find sum and product
 puts list.inject(0) {|sum, x| sum + x}, list.inject(1) {|product, x| product * x}
 
-puts list.inject(0) { |sum, x|
+puts list.inject(0) {|sum, x|
 	puts "Running sum: #{sum}"
 	puts "#{sum} + #{x} : #{sum + x}"
 	sum + x

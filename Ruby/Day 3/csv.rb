@@ -3,11 +3,11 @@ class CSVRow
 
 	def initialize(headers, row_contents)
 		@dict = {}
-		headers.each_index {|i|  @dict[headers[i]] = row_contents[i]}
+		headers.each_index {|i| @dict[headers[i]] = row_contents[i]}
 	end
 
 	def to_s
-		@dict.inject("") {|string, (k, v)| string + "#{k}: #{v}, " }
+		@dict.inject("") {|string, (k, v)| string + "#{k}: #{v}, "}
 	end
 
 	def method_missing(name, *args)
@@ -17,6 +17,7 @@ end
 
 class RubyCsv
 	attr_accessor :headers, :csv_contents
+
 	def initialize
 		read
 	end
@@ -40,4 +41,4 @@ end
 csv = RubyCsv.new
 puts csv.headers.inspect
 csv.csv_contents.each(&method(:puts))
-csv.csv_contents.each {|x| puts x.header1 }
+csv.csv_contents.each {|x| puts x.header1}

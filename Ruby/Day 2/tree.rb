@@ -1,7 +1,7 @@
 class Tree
 	attr_accessor :children, :node_name
 
-	def initialize(name, children=[])
+	def initialize(name, children = [])
 		@children = children
 		@node_name = name
 	end

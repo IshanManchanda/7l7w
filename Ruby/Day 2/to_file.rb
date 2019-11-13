@@ -22,4 +22,4 @@ class Person
 end
 
 
-Person.new('Gumes').to_f
+Person.new('Test').to_f

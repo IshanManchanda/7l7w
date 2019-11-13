@@ -16,6 +16,6 @@ puts list.to_s
 list = [1, 3, 5, 6, 2, 32, 2, 8, 3, 4, 1, 2]
 hash = {}
 list.each_with_index do |i, x|
-  hash[i] = x
+	hash[i] = x
 end
 puts hash.to_s
